@@ -1,0 +1,20 @@
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyByDOkR3zyoMGFywXbyfV8Hze6CZwSNjW8",
+  authDomain: "olx-clone-moiz.firebaseapp.com",
+  projectId: "olx-clone-moiz",
+  storageBucket: "olx-clone-moiz.appspot.com",
+  messagingSenderId: "927332046353",
+  appId: "1:927332046353:web:ad08393d536fe94a2ac3b0",
+  measurementId: "G-CMKR0JV06M",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth();
+
+export { auth, signInWithPopup, GoogleAuthProvider };
